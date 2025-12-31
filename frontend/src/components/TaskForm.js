@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import API from "../api/api";
+import "./TaskForm.css"
 
 const TaskForm = ({ editTask, onTaskAdded, onTaskUpdated }) => {
   const [title, setTitle] = useState("");

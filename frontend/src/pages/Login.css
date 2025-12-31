@@ -1,0 +1,101 @@
+/* ===== Page Wrapper ===== */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  font-family: "Inter", "Segoe UI", sans-serif;
+  padding: 20px;
+}
+
+/* ===== Login Card ===== */
+.login-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 380px;
+  padding: 28px 26px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* ===== Title ===== */
+.login-card h2 {
+  margin-bottom: 22px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* ===== Form ===== */
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ===== Inputs ===== */
+.login-card input {
+  height: 42px;
+  padding: 0 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  outline: none;
+  background: #f9fafb;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-card input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+  background: #ffffff;
+}
+
+/* ===== Button ===== */
+.login-card button {
+  height: 42px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.15s ease;
+}
+
+.login-card button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* ===== Footer Text ===== */
+.login-card p {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.login-card a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-card a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Mobile Optimization ===== */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 22px 18px;
+  }
+
+  .login-card h2 {
+    font-size: 22px;
+  }
+}

@@ -117,6 +117,7 @@ const Dashboard = () => {
                   </p>
 
                   {/* Status dropdown */}
+                  <p>Task Status</p>
                   <select
                     value={task.status}
                     onChange={(e) =>

@@ -1,0 +1,79 @@
+/* ===== Task Form : Desktop (Row Layout) ===== */
+.task-form {
+  background: #ffffff;
+  padding: 14px 16px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: nowrap;
+}
+
+/* ===== Same size inputs ===== */
+.task-form input,
+.task-form textarea,
+.task-form select {
+  width: 170px;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  background: #f9fafb;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-form textarea {
+  resize: none;
+  line-height: 38px;
+}
+
+/* Focus */
+.task-form input:focus,
+.task-form textarea:focus,
+.task-form select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+  background: #ffffff;
+}
+
+/* ===== Button ===== */
+.task-form button {
+  height: 40px;
+  padding: 0 18px;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.3s ease;
+}
+
+.task-form button:hover {
+  background: #1d4ed8;
+}
+
+/* ================================================= */
+/* 📱 MOBILE RESPONSIVE : COLUMN LAYOUT */
+/* ================================================= */
+@media (max-width: 768px) {
+  .task-form {
+    flex-direction: column;       /* COLUMN */
+    align-items: stretch;
+  }
+
+  .task-form input,
+  .task-form textarea,
+  .task-form select,
+  .task-form button {
+    width: 100%;                  /* FULL WIDTH */
+  }
+}

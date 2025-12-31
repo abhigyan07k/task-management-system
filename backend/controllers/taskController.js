@@ -63,11 +63,11 @@ exports.updateTask = async (req, res) => {
     const updatedTask = await Task.findOneAndUpdate(
       { _id: req.params.id, user: req.user._id },
       {
-        $set: req.body, // only update sent fields
+        $set: req.body, 
       },
       {
         new: true,
-        runValidators: false, // 🔥 VERY IMPORTANT
+        runValidators: false, 
       }
     );
 

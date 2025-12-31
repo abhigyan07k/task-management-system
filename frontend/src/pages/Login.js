@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { loginUser } from "../api/authApi";
 import { Link, useNavigate } from "react-router-dom";
+import "./Login.css"
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -19,9 +20,11 @@ const Login = () => {
     }
   };
 
-  return (
-    <div>
+ return (
+  <div className="login-container">
+    <div className="login-card">
       <h2>Login</h2>
+      <p>Log in to continue managing your tasks</p>
 
       <form onSubmit={handleLogin}>
         <input
@@ -29,6 +32,7 @@ const Login = () => {
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
 
         <input
@@ -36,6 +40,7 @@ const Login = () => {
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          required
         />
 
         <button type="submit">Login</button>
@@ -45,6 +50,8 @@ const Login = () => {
         New user? <Link to="/register">Create an account</Link>
       </p>
     </div>
+  </div>
+
   );
 };
 
