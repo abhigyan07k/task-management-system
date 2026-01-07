@@ -13,7 +13,7 @@ const protect = async (req, res, next) => {
     if (!token) {
       return res.status(400).json({ message: "User unauthorized" });
     }
-    const decoded = jwt.verify(token, process.env.JWT_TOKEN);
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
     req.user = await User.findById(decoded.id).select("-password");
 
     if (!req.user) {
